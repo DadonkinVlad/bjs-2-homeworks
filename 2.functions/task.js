@@ -25,7 +25,7 @@ function summElementsWorker(...arr) {
   let sum = 0;
 
   if (arr.length === 0) {
-    return "Массив пустой";
+    return 0;
 } else {
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
@@ -36,7 +36,7 @@ function summElementsWorker(...arr) {
 
 function differenceMaxMinWorker(...arr) {
   if (arr.length === 0) {
-    return "Массив пустой";
+    return 0;
   } else {
     let min = arr[0];
     let max = arr[0];
@@ -56,27 +56,27 @@ function differenceMaxMinWorker(...arr) {
 
 function differenceEvenOddWorker(...arr) {
   if (arr.length === 0) {
-    return "Массив пустой";
-} else {
-  let sumEvenElement = 0;
-  let sumOddElement = 0;
+    return 0;
+  } else {
+    let sumEvenElement = 0;
+    let sumOddElement = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-      sumEvenElement += arr[i];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 === 0) {
+        sumEvenElement += arr[i];
+      } else {
+        sumOddElement += arr[i];
+      }
     }
-    else {
-      sumOddElement += arr[i];
-    }
+
+    return sumEvenElement - sumOddElement;
   }
 }
 
-  return sumEvenElement - sumOddElement;
-}
 
 function averageEvenElementsWorker(...arr) {
   if (arr.length === 0) {
-    return "Массив пустой";
+    return 0;
 } else {
   let sumEvenElement = 0;
   let countEvenElement = 0;
